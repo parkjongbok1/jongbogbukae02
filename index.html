@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부동산캐스트</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+
+    <!-- 로컬작업시 주석 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- 로컬작업시 주석 -->
+
+    <!-- 로컬작업시 주석해제 -->
+    <!-- <link rel="stylesheet" href="css/common.css<?php echo '?ver='.date('Ymds');?>" />
+    <link rel="stylesheet" href="css/style.css<?php echo '?ver='.date('Ymds');?>" /> -->
+    <!-- 로컬작업시 주석해제 -->
+
+    <meta property="og:image" content="../meta/thumb.jpg" />
+    <link rel="shortcut icon" href="../meta/favicon.ico" />
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/EC_scroll.js"></script>
+    <script src="js/scroll_event_plus.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      if (
+        navigator.userAgent.match(
+          /iPhone|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|opera mobi|Windows Phone|IEMobile|POLARIS/
+        ) != null
+      ) {
+        top.location.href = "../mobile/"; //모바일용 인덱스파일을 띄어라
+      }
+    </script>
+  </head>
+  <body>
+    <!-- wrep -->
+    <div class="wrep">
+      <!-- header -->
+      <header class="header">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="#">
+              <img src="image/logo.png" alt="" />
+            </a>
+          </h1>
+
+          <div class="call">
+            <img src="image/call.png" alt="" />
+          </div>
+        </div>
+      </header>
+
+      <!-- side_bar -->
+      <div class="side_bar">
+        <div class="side_wrap">
+          <div class="barTt">
+            <strong class="on">menu</strong>
+            <strong class="off">close</strong>
+          </div>
+
+          <div class="bar_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meun-bar">
+        <ul id="menu-box" class="menu-box">
+          <li class="link_cont">
+            <a href="#">INTRODUCT</a>
+          </li>
+
+          <li class="link_cont">
+            <a href="#">wokrs</a>
+            <ul class="sub_link">
+              <li><a href="#" class="links">웹, 모바일 사이트 제작</a></li>
+              <li><a href="#" class="links">웹, 모바일 사이트 유지보수</a></li>
+              <li><a href="#" class="links">온라인 광고</a></li>
+              <li><a href="#" class="links">VR</a></li>
+            </ul>
+          </li>
+
+          <li class="link_cont">
+            <a href="#">PORTFOLIO</a>
+            <ul class="sub_link">
+              <li><a href="#" class="links">연간유지보수</a></li>
+              <li><a href="#" class="links">주요실적</a></li>
+              <li><a href="#" class="links">연간실적</a></li>
+            </ul>
+          </li>
+
+          <li class="link_cont">
+            <a href="#">contacts us</a>
+          </li>
+        </ul>
+
+        <div class="company_infor">
+          <h4>
+            <span>address</span>서울 관악구 남부순환로231길 16 2층 부동산캐스트
+          </h4>
+          <h4><span>E-MAIL</span>nokup@daum.net</h4>
+          <h4><span>TEL</span>02)876-8887</h4>
+          <h4><span>Fax</span>02)877-0015</h4>
+        </div>
+
+        <video
+          src="image/menuBg.mp4"
+          autoplay=""
+          muted=""
+          loop=""
+          plysinline=""
+          class="bar_bg"
+        ></video>
+      </div>
+
+      <!-- main wrapper -->
+      <main class="main wrapper">
+        <!-- sec01 visual -->
+        <section class="sec01 visual">
+          <div class="title">
+            <h2>
+              <strong>Designing</strong> for<br />
+              Understanding <strong>People</strong>
+            </h2>
+
+            <div class="btmTt">
+              <p>사람을 이해하는 디자인</p>
+              <div class="line"></div>
+              <p>부동산캐스트</p>
+            </div>
+          </div>
+
+          <div class="photo_frame">
+            <div class="item item01">
+              <img src="image/vi_item01.png" alt="" />
+            </div>
+
+            <div class="item item02">
+              <img src="image/vi_item02.png" alt="" />
+            </div>
+
+            <div class="item item03">
+              <img src="image/vi_item03.png" alt="" />
+            </div>
+
+            <div class="item item04">
+              <img src="image/vi_item04.png" alt="" />
+            </div>
+
+            <div class="item item05">
+              <img src="image/vi_item05.png" alt="" />
+            </div>
+
+            <div class="item item06">
+              <img src="image/vi_item06.png" alt="" />
+            </div>
+
+            <div class="item item07">
+              <img src="image/vi_item07.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <!-- sec02 produce -->
+        <section class="sec02 produce"></section>
+
+        <!-- sec03 work -->
+        <section class="sec03 work"></section>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer" id="common"></footer>
+    </div>
+  </body>
+</html>
