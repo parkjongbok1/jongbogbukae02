@@ -1,27 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
-/* font-family: 'Noto Sans KR', sans-serif; */
+
 /* Light 300 */
 /* Regular 400 */
 /* Medium 500 */
 /* Bold 700 */
 /* Black 900 */
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap");
-/* font-family: 'IBM Plex Sans KR', sans-serif; */
-/* Thin 100 */
-/* ExtraLight 200 */
-/* Light 300 */
-/* Regular 400 */
-/* Medium 500 */
-/* SemiBold 600 */
-/* Bold 700 */
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* font-family: "Roboto", sans-serif; */
 
-::-webkit-scrollbar {
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/* font-family: "Libre Baskerville", serif; */
+
+/* ::-webkit-scrollbar {
   width: 0px;
-}
+} */
 
 /* ::-webkit-scrollbar-track {
   background: rgb(219, 219, 219);
@@ -130,9 +123,10 @@ body {
   letter-spacing: -1.5px;
   word-break: keep-all;
   color: #000;
-  cursor: url("../image/cursor03.cur"), auto;
+  font-family: "Noto Sans KR", sans-serif;
+  /* cursor: url("../image/cursor03.cur"), auto; */
 
-  background: linear-gradient(to bottom, #0b1230, #f8f8f8);
+  /* background: linear-gradient(to bottom, #0b1230, #f8f8f8); */
 }
 .wrep {
   width: 100%;
@@ -143,12 +137,12 @@ body {
   overflow: hidden;
 }
 section {
-  /* width: 100%; */
+  width: 100%;
   max-width: 1920px;
   min-width: 1400px;
   margin: 0 auto;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 a {
@@ -165,7 +159,7 @@ a {
   top: 40px;
   transform: translateX(-50%);
   transition: 0.8s;
-  z-index: 5100;
+  z-index: 7777;
 
   color: white;
   background: transparent;
@@ -199,7 +193,7 @@ a {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 3000;
+  z-index: 7777;
   display: flex;
   justify-content: center;
   transition: 0.6s;
@@ -305,8 +299,8 @@ a {
   align-items: center;
 
   position: fixed;
-  left: 20vw;
-  top: 0;
+  left: 3vw;
+  top: -7vw;
   overflow: hidden;
   transition: 0.5s;
   opacity: 0;
@@ -314,8 +308,9 @@ a {
 }
 .meun-bar.active {
   left: 0;
+  top: 0;
   opacity: 1;
-  z-index: 2000;
+  z-index: 6666;
 }
 
 .meun-bar .menu-box {
@@ -365,8 +360,18 @@ a {
   font-weight: 300;
   margin-top: 36px;
   display: block;
+  position: relative;
+  overflow: hidden;
 }
-
+/* .meun-bar .sub_link li a.links::before {
+  content: attr(data-text);
+  color: yellow;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: 0.5s;
+} */
 .meun-bar .company_infor {
   position: absolute;
   left: 50%;

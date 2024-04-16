@@ -2,6 +2,8 @@
   height: 100vh;
   background: url("../image/vi_bg.png") no-repeat center center;
   background-size: cover;
+  position: relative;
+  /* position: fixed; */
 }
 .visual .title {
   position: absolute;
@@ -12,6 +14,9 @@
 
   color: #fff;
   text-align: center;
+
+  opacity: 1;
+  transition: 0.3s;
 }
 .visual .title h2 {
   font-size: 68px;
@@ -196,4 +201,57 @@
     opacity: 1;
     transform: translate(0, 0);
   }
+}
+
+/* produce */
+.produce {
+  height: 300vh;
+  z-index: 3000;
+  background: transparent;
+  /* top: 100vh; */
+}
+.produce .pointImg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* background: skyblue; */
+}
+.produce .pointImg::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 550px;
+  height: 550px;
+  background: url("../image/pointImg.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+.produce .pr_title {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+.produce .pr_title h2 {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 190px;
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.164);
+}
+
+/* work */
+.work {
+  height: 200vh;
+  background: #f7f7f7;
+  margin-top: 100vh;
+  z-index: 4000;
 }

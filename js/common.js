@@ -12,3 +12,11 @@ $(document).ready(function () {
     $(".bar_btn, .meun-bar, .barTt").toggleClass("active");
   });
 });
+
+$(".side_bar").on("click", function () {
+  if ($(this).toggleClass(".side_bar")) {
+    $(".meun-bar bar_bg").get(0).play();
+  } else {
+    $(".meun-bar bar_bg").get(0).pause();
+  }
+});
