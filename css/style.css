@@ -3,6 +3,7 @@
   background: url("../image/vi_bg.png") no-repeat center center;
   background-size: cover;
   position: relative;
+
   /* position: fixed; */
 }
 .visual .title {
@@ -17,17 +18,47 @@
 
   opacity: 1;
   transition: 0.3s;
+
+  animation: load_op 2s both;
+  animation-delay: 1s;
 }
 .visual .title h2 {
   font-size: 68px;
   font-weight: 300;
   line-height: 92px;
-  font-family: "Roboto", sans-serif;
   margin-bottom: 32px;
 }
 .visual .title h2 strong {
   font-weight: 700;
+
   color: #426aeb;
+  font-family: "Roboto", sans-serif;
+}
+.visual .title h2 strong span {
+  /* color: pink; */
+  /* transform: translate(-60px, -30px) rotate(-90deg); */
+  display: inline-block;
+
+  animation: load_rot 0.7s both;
+  animation-delay: 2s;
+}
+@keyframes load_op {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes load_rot {
+  0% {
+    transform: translate(-60px, -30px) rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
 }
 
 .visual .title .btmTt {
@@ -358,8 +389,8 @@
   color: white;
 }
 .workScroll .item {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
 
   display: flex;
   align-items: center;

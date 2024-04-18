@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  $("#intro")
+    .delay(7300)
+    .fadeOut(1000, function () {
+      $("body").removeClass("before-load");
+    });
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $(".header").addClass("active");
