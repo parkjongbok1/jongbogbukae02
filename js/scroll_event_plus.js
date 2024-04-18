@@ -2,11 +2,14 @@ $(document).ready(function () {
   // 각 섹션의 변수
   const sec1_offset = $(".visual").offset().top;
   const sec2_offset = $(".produce").offset().top;
-  const sec3_offset = $(".work").offset().top;
+  const sec2_1_offset = $(".produce_air").offset().top;
   // const sec5_offset = $(".sec05").offset().top;
+
+  let contents_scrillTop = 0;
 
   $(window).scroll(function () {
     const scrollTop = $(this).scrollTop();
+    contents_scrillTop = scrollTop - sec2_1_offset;
 
     if (scrollTop >= sec1_offset + 2) {
       $(".visual ").css({
@@ -36,23 +39,43 @@ $(document).ready(function () {
       $(".produce .pointImg").css({
         position: "fixed",
       });
+      $(".produce_air").css({
+        position: "fixed",
+      });
+      $(".produce_air img").css({
+        transform:
+          "translateY(" +
+          -contents_scrillTop * 0.15 +
+          "px)translateX(" +
+          contents_scrillTop * 0.35 +
+          "px)",
+      });
     } else {
       $(".produce .pointImg").css({
+        position: "",
+      });
+      $(".produce_air").css({
         position: "",
       });
     }
     // sec2 end
 
-    // sec3
-    if (scrollTop >= sec3_offset + 1) {
-      $(".work ").css({
-        position: "fixed",
-      });
-    } else {
-      $(".work").css({
-        position: "",
-      });
-    }
-    // sec3 end
+    // sec2
+    // if (scrollTop >= sec3_offset + 2) {
+    //   $(".work .desc .item").css({
+    //     position: "fixed",
+    //     left: 50 + "%",
+    //     top: 50 + "%",
+    //     transform: translate(-50 + "%", -50 + "%"),
+    //   });
+    // } else {
+    //   $("work .desc .item").css({
+    //     position: "",
+    //     left: 0,
+    //     top: 0,
+    //     transform: translate(0, 0),
+    //   });
+    // }
+    // sec2 end
   });
 });

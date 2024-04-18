@@ -208,7 +208,7 @@
   height: 300vh;
   z-index: 3000;
   background: transparent;
-  /* top: 100vh; */
+  margin-bottom: 100vh;
 }
 .produce .pointImg {
   width: 100vw;
@@ -217,7 +217,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* background: skyblue; */
+  overflow: hidden;
 }
 .produce .pointImg::before {
   content: "";
@@ -231,6 +231,24 @@
   background: url("../image/pointImg.jpg") no-repeat center bottom;
   background-size: cover;
 }
+.produce_air {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  /* background: pink; */
+}
+.produce_air img {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  /* transform: translateX() translateY(); */
+}
+
 .produce .pr_title {
   position: absolute;
   left: 50%;
@@ -238,6 +256,8 @@
   transform: translate(-50%, -50%);
 
   text-align: center;
+
+  /* display: none; */
 }
 .produce .pr_title h2 {
   font-size: 120px;
@@ -249,9 +269,117 @@
 }
 
 /* work */
-.work {
-  height: 200vh;
+/* .work {
+  height: 2530px;
   background: #f7f7f7;
-  margin-top: 100vh;
   z-index: 4000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work .desc {
+  width: 1200px;
+  border: 1px solid black;
+}
+.work .desc .item {
+  width: 1200px;
+  height: 370px;
+  background: pink;
+  margin-bottom: 150px;
+
+  position: relative;
+}
+.work .desc .item.item01 {
+}
+.work .desc .item.item02 {
+}
+.work .desc .item.item03 {
+}
+.work .desc .item.item04 {
+  margin-bottom: 0;
+}
+
+.work .desc .item .title {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.work .desc .item .title span {
+}
+.work .desc .item .title h2 {
+}
+
+.work .desc .item .workImg {
+  width: 680px;
+  height: 100%;
+  background-size: cover;
+  float: right;
+  position: relative;
+}
+.work .desc .item .workImg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.work .desc .item .workImg01::before {
+  background: url("../image/workImg01.png") no-repeat center center;
+}
+.work .desc .item .workImg02::before {
+  background: url("../image/workImg02.png") no-repeat center center;
+}
+.work .desc .item .workImg03::before {
+  background: url("../image/workImg03.png") no-repeat center center;
+}
+.work .desc .item .workImg04::before {
+  background: url("../image/workImg04.png") no-repeat center center;
+} */
+.work {
+  z-index: 4000;
+}
+.workScroll {
+  height: 100vh;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+  color: white;
+}
+.workScroll .item {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.workScroll .item h2 {
+  font-size: 72px;
+  font-weight: 500;
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  transition: 0.3s;
+}
+.workScroll .item:hover h2,
+.workScroll .item:hover p {
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.61);
+}
+.workScroll .item p {
+  font-size: 24px;
+  font-weight: 300;
+  color: #f8f6f5;
+  margin-top: 26px;
+  transition: 0.3s;
 }

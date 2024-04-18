@@ -11,6 +11,11 @@ $(document).ready(function () {
   $(".side_bar").click(function () {
     $(".bar_btn, .meun-bar, .barTt").toggleClass("active");
   });
+
+  // side_bar
+  $(".family").click(function () {
+    $(".family-list, .fa-caret-up").toggleClass("active");
+  });
 });
 
 $(".side_bar").on("click", function () {
