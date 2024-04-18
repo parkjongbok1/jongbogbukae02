@@ -246,6 +246,7 @@
   position: absolute;
   left: 40%;
   top: 30%;
+  opacity: 0;
   /* transform: translateX() translateY(); */
 }
 

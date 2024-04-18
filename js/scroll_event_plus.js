@@ -43,6 +43,9 @@ $(document).ready(function () {
         position: "fixed",
       });
       $(".produce_air img").css({
+        opacity: 1,
+      });
+      $(".produce_air img").css({
         transform:
           "translateY(" +
           -contents_scrillTop * 0.15 +
@@ -56,6 +59,9 @@ $(document).ready(function () {
       });
       $(".produce_air").css({
         position: "",
+      });
+      $(".produce_air img").css({
+        opacity: 0,
       });
     }
     // sec2 end
