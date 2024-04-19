@@ -1,9 +1,4 @@
 $(document).ready(function () {
-  // $("#intro")
-  //   .delay(6000)
-  //   .fadeOut(1000, function () {
-  //     $("body").removeClass("before-load");
-  //   });
   let targetElement = $(".custom-container");
 
   $("#intro")
@@ -85,3 +80,29 @@ $(".side_bar").on("click", function () {
     $(".meun-bar bar_bg").get(0).pause();
   }
 });
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY; // 스크롤된 거리
+  let scrollHeight = document.body.scrollHeight - window.innerHeight; // 전체 스크롤 가능한 높이
+  let progress = (scrollTop / scrollHeight) * 100; // 스크롤된 비율을 퍼센트로 계산
+
+  // 랜덤한 색상 생성
+  let startColor = getRandomColor();
+  let endColor = getRandomColor();
+
+  // 그라데이션 스타일 생성
+  let gradientStyle = `linear-gradient(to right, ${startColor}, ${endColor})`;
+
+  // 프로그레스 바에 그라데이션 스타일 적용
+  let heightBar = document.getElementById("heightBar");
+  heightBar.style.background = gradientStyle;
+  heightBar.style.width = progress + "%";
+});
+
+function getRandomColor() {
+  // 랜덤한 RGB 값 생성
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  return `rgb(${red}, ${green}, ${blue})`;
+}

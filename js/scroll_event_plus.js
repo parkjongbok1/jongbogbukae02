@@ -3,7 +3,6 @@ $(document).ready(function () {
   const sec1_offset = $(".visual").offset().top;
   const sec2_offset = $(".produce").offset().top;
   const sec2_1_offset = $(".produce_air").offset().top;
-  // const sec5_offset = $(".sec05").offset().top;
 
   let contents_scrillTop = 0;
 
@@ -64,24 +63,6 @@ $(document).ready(function () {
         opacity: 0,
       });
     }
-    // sec2 end
-
-    // sec2
-    // if (scrollTop >= sec3_offset + 2) {
-    //   $(".work .desc .item").css({
-    //     position: "fixed",
-    //     left: 50 + "%",
-    //     top: 50 + "%",
-    //     transform: translate(-50 + "%", -50 + "%"),
-    //   });
-    // } else {
-    //   $("work .desc .item").css({
-    //     position: "",
-    //     left: 0,
-    //     top: 0,
-    //     transform: translate(0, 0),
-    //   });
-    // }
     // sec2 end
   });
 });
