@@ -124,9 +124,98 @@ body {
   word-break: keep-all;
   color: #000;
   font-family: "Noto Sans KR", sans-serif;
-  /* cursor: url("../image/cursor03.cur"), auto; */
+}
+.before-load .wrep {
+  display: none;
+}
 
-  /* background: linear-gradient(to bottom, #0b1230, #f8f8f8); */
+#intro {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999999;
+
+  background: #426aeb;
+}
+#intro svg {
+  font-family: "Russo One", sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#intro svg text {
+  text-transform: uppercase;
+  animation: stroke 5s both;
+  stroke-width: 2;
+  stroke: #ffffff;
+  font-size: 120px;
+  fill: #08123a;
+}
+.progress-bar {
+  width: 1600px;
+  height: 15px;
+  /* border: 1px solid #ccc; */
+  /* overflow: hidden; */
+
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translateX(-50%);
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #c9cee0;
+  transition: width 5s ease-in-out;
+  border-radius: 30px;
+  margin-top: 32px;
+}
+
+.counter {
+  width: 0;
+}
+.counter span {
+  font-size: 52px;
+  font-weight: 700;
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+
+  display: block;
+  width: 0;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: #ffffff;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: #ffffff;
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: #ffffff;
+    stroke-width: 3;
+  }
+  100% {
+    stroke: #ffffff;
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
 }
 
 .wrep {
@@ -428,12 +517,13 @@ a {
   transform: translate(-50%, -50%);
 }
 
+/* footer */
 .footer {
   height: 100vh;
   background: url("../image/foot_bg.png") no-repeat center center;
   background-size: cover;
   position: relative;
-  z-index: 5000;
+  z-index: 8888;
   display: flex;
   justify-content: center;
   align-items: center;

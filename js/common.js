@@ -1,9 +1,63 @@
 $(document).ready(function () {
+  // $("#intro")
+  //   .delay(6000)
+  //   .fadeOut(1000, function () {
+  //     $("body").removeClass("before-load");
+  //   });
+  let targetElement = $(".custom-container");
+
   $("#intro")
-    .delay(7300)
+    .delay(6000)
     .fadeOut(1000, function () {
-      $("body").removeClass("before-load");
+      // body 클래스를 제거하고, 대상 요소에 클래스를 추가합니다.
+      targetElement.removeClass("before-load");
     });
+
+  function setProgress(progress) {
+    // 프로그레스 바 엘리먼트를 선택합니다.
+    const progressBar = document.querySelector(".progress");
+    // 프로그레스 바의 너비를 전달된 퍼센트 값으로 설정합니다.
+    progressBar.style.width = `${progress}%`;
+  }
+
+  // 0부터 100%까지의 프로그레스를 애니메이션으로 표시합니다.
+  function animateProgressBar() {
+    let progress = 0;
+    // 일정 간격으로 반복하여 애니메이션을 실행합니다.
+    const interval = setInterval(() => {
+      // 프로그레스가 100%에 도달하면 애니메이션을 멈춥니다.
+      if (progress >= 100) {
+        clearInterval(interval);
+      } else {
+        // 프로그레스를 1%씩 증가시킵니다.
+        progress++;
+        // 프로그레스를 설정하는 함수를 호출하여 화면에 반영합니다.
+        setProgress(progress);
+      }
+    }, 10); // 애니메이션 간격을 조절하여 부드러운 애니메이션을 제어합니다.
+  }
+
+  // 프로그레스 바 애니메이션을 시작합니다.
+  animateProgressBar();
+
+  // 로딩을 처리할 함수
+  function startLoading() {
+    let span = document.querySelector(".counter span");
+    let counter = 0;
+    let interval = setInterval(function () {
+      counter++;
+      span.style.counter = counter + "%";
+      span.textContent = counter + "%";
+      if (counter >= 100) {
+        clearInterval(interval);
+      }
+    }, 55); // 로딩 속도를 조절할 수 있습니다.
+  }
+
+  // 페이지 로딩 후 자동으로 로딩 시작
+  window.addEventListener("load", function () {
+    startLoading();
+  });
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
