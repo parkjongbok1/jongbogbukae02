@@ -271,14 +271,12 @@
   width: 550px;
   height: 550px;
   overflow: hidden;
-  /* background: pink; */
 }
 .produce_air img {
   position: absolute;
   left: 40%;
   top: 30%;
   opacity: 0;
-  /* transform: translateX() translateY(); */
 }
 
 .produce .pr_title {
